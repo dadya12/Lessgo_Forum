@@ -14,3 +14,12 @@ class Topics(models.Model):
     def __str__(self):
         return self.name
 
+
+class Answers(models.Model):
+    topic = models.ForeignKey('webapp.Topics', on_delete=models.CASCADE, related_name='answers')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='author_answers')
+    created = models.DateTimeField(auto_now_add=True)
+    text = models.TextField(max_length=500, verbose_name='Текст')
+
+    def __str__(self):
+        return self.text

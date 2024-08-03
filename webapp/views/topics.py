@@ -1,5 +1,5 @@
 from django.shortcuts import render, reverse
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from webapp.models import Topics
 from webapp.forms import TopicForm, SearchForm
 from django.db.models import Q
@@ -47,3 +47,11 @@ class CreateTopicView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse('webapp:home')
+
+
+class TopicDetailView(DetailView):
+    model = Topics
+    template_name = 'Topics/topic_detail.html'
+
+
+
