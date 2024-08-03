@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+
+{% endblock %}
+
+<title>{% block title %}Create{% endblock %}</title>
+
+{% block content %}
+    <center>
+        <h1 style="margin-top: 50px; margin-bottom: 50px">Новая Тема:</h1>
+    </center>
+    <form method="post" action="{% url 'webapp:topic_create' %}">
+        {% include 'partial/universal_form.html' with value_submit='Создать' %}
+    </form>
+{% endblock %}

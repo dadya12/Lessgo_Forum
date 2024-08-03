@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-4">
+        <center><h1 class="mb-4">Темы</h1></center>
+        <div class="list-group" style="border: solid 1px">
+            {% for t in topics %}
+                <a href="" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" style="text-decoration: none; color: black;">
+                    <span>{{ t.name }}</span>
+                    <div class="ml-auto text-muted">
+                        <span>{{ t.created|date:"d-m-Y" }}</span>
+                        <span class="mx-3">|</span>
+                        <span>{{ t.author }}</span>
+                        <span class="mx-3">|</span>
+                        <span>Ответы: {{ t.answers_count }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
