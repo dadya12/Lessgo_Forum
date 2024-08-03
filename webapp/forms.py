@@ -13,6 +13,3 @@ class AnswerForm(forms.ModelForm):
         model = Answers
         fields = ['text']
 
-
-class SearchForm(forms.Form):
-    search = forms.CharField(max_length=150, required=False, label='Search')

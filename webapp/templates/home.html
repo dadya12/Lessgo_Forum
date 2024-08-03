@@ -17,4 +17,9 @@
             {% endfor %}
         </div>
     </div>
+     <div class="container" style="margin-bottom: 50px; align-items: center">
+        {% if is_paginated %}
+            {% include 'partial/pagination.html' %}
+        {% endif %}
+    </div>
 {% endblock %}
