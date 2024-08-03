@@ -32,6 +32,7 @@
                                 style="border: none; outline: none; margin-top:3px; background: transparent">Выйти
                         </button>
                     </form>
+                    <a class="nav-link active" aria-current="page" href="{% url 'accounts:profile' request.user.id %}" style="padding: 0; margin-top: 4px; margin-left: 10px">Кабинет</a>
                 {% endif %}
             </div>
         </div>

@@ -1,6 +1,6 @@
 from django.contrib.auth import login, get_user_model
 from django.shortcuts import redirect, reverse
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 from accounts.forms import MyUserCreationForm
 
 
@@ -21,3 +21,15 @@ class RegistrationView(CreateView):
         if not next_page:
             next_page = reverse('webapp:home')
         return next_page
+
+
+class UserDetailView(DetailView):
+    template_name = 'user_detail.html'
+    model = get_user_model()
+    context_object_name = 'user_obj'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.get_object()
+        context['answer_count'] = user.author_answers.count()
+        return context
