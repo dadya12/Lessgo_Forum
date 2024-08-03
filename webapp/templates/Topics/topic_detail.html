@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
+{% block navbar %}
+    {% if request.user == topics.author %}
+        <a class="nav-link active" aria-current="page" href="{% url 'webapp:topic_update' topics.pk %}"
+           style="padding: 0; margin-top: 3px; margin-right: 20px">Обновить тему</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'webapp:topic_delete' topics.pk %}"
+           style="padding: 0; margin-top: 3px; margin-right: 20px">Удалить тему</a>
+    {% endif %}
+{% endblock %}
+
 {% block content %}
     <div class="container mt-4">
         <h5>{{ topics.name }}<span
@@ -19,8 +28,14 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ a.created|date:"d-m-Y H:i" }}</h5>
                             <p class="card-text">{{ a.text }}</p>
-                            <a href="" class="card-text"
+                            <a href="{% url 'accounts:profile' a.author.pk %}" class="card-text"
                                style="text-decoration: none; color: black">{{ a.author.username }}</a>
+                            {% if user.is_authenticated and user == a.author %}
+                                <a href="{% url 'webapp:answer_update' a.pk %}" class="card-text"
+                                   style="text-decoration: none; color: black; margin-left: 40px">Изменить</a>
+                                <a href="{% url 'webapp:answer_delete' a.pk %}" class="card-text"
+                                   style="text-decoration: none; color: black; margin-left: 40px">Удалить</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

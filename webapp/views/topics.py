@@ -1,8 +1,9 @@
-from django.shortcuts import render, reverse
-from django.views.generic import CreateView, ListView, DetailView
+from django.shortcuts import reverse
+from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 from webapp.models import Topics
 from webapp.forms import TopicForm
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.urls import reverse_lazy
 
 
 class HomePageView(ListView):
@@ -34,6 +35,29 @@ class TopicDetailView(DetailView):
     template_name = 'Topics/topic_detail.html'
 
 
+class TopicUpdateView(PermissionRequiredMixin, UpdateView):
+    model = Topics
+    form_class = TopicForm
+    template_name = 'Topics/topic_update.html'
+    permission_required = 'webapp.change_topic'
+
+    def has_permission(self):
+        topic = self.get_object()
+        return super().has_permission() and self.request.user == topic.author
+
+    def get_success_url(self):
+        return reverse('webapp:topic_detail', kwargs={'pk': self.object.pk})
+
+
+class TopicDeleteView(PermissionRequiredMixin, DeleteView):
+    model = Topics
+    template_name = 'Topics/topic_delete.html'
+    permission_required = 'webapp.delete_topic'
+    success_url = reverse_lazy('webapp:home')
+
+    def has_permission(self):
+        topic = self.get_object()
+        return super().has_permission() and self.request.user == topic.author
 
 
 
