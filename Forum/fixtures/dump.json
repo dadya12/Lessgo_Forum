@@ -1,0 +1,227 @@
+[
+{
+  "model": "webapp.topics",
+  "pk": 2,
+  "fields": {
+    "name": "Где найти хорошую работу",
+    "content": "На днях столкнулся с такой проблемой что нет денег",
+    "author": 1,
+    "created": "2024-08-03",
+    "answers_count": 1
+  }
+},
+{
+  "model": "webapp.topics",
+  "pk": 3,
+  "fields": {
+    "name": "Темная сторона интернета",
+    "content": "Наткнулся на Ивана золо он что-то пел про это",
+    "author": 1,
+    "created": "2024-08-03",
+    "answers_count": 0
+  }
+},
+{
+  "model": "webapp.topics",
+  "pk": 4,
+  "fields": {
+    "name": "Световой меч из мусора",
+    "content": "Думаю что это бред но все же как его сделать??",
+    "author": 1,
+    "created": "2024-08-04",
+    "answers_count": 6
+  }
+},
+{
+  "model": "webapp.topics",
+  "pk": 5,
+  "fields": {
+    "name": "Едем в село",
+    "content": "Как-то раз ездили а куда не помню",
+    "author": 1,
+    "created": "2024-08-03",
+    "answers_count": 0
+  }
+},
+{
+  "model": "webapp.topics",
+  "pk": 6,
+  "fields": {
+    "name": "Где найти бисер",
+    "content": "Подскажите где его найти",
+    "author": 1,
+    "created": "2024-08-03",
+    "answers_count": 0
+  }
+},
+{
+  "model": "webapp.topics",
+  "pk": 7,
+  "fields": {
+    "name": "Где скачать игры",
+    "content": "Не знаю просто где",
+    "author": 1,
+    "created": "2024-08-03",
+    "answers_count": 0
+  }
+},
+{
+  "model": "webapp.topics",
+  "pk": 8,
+  "fields": {
+    "name": "Как написать пагинацию для ответов",
+    "content": "Хз",
+    "author": 3,
+    "created": "2024-08-03",
+    "answers_count": 0
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 2,
+  "fields": {
+    "topic": 4,
+    "author": 1,
+    "created": "2024-08-03T09:05:46.271Z",
+    "text": "Почему никто не пишет"
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 3,
+  "fields": {
+    "topic": 2,
+    "author": 1,
+    "created": "2024-08-03T09:33:32.971Z",
+    "text": "Не знаю я тоже в поиске"
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 5,
+  "fields": {
+    "topic": 4,
+    "author": 3,
+    "created": "2024-08-03T09:44:59.296Z",
+    "text": "Не знаю как делать такой"
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 6,
+  "fields": {
+    "topic": 4,
+    "author": 1,
+    "created": "2024-08-03T09:46:45.737Z",
+    "text": "Ну блин вооще не знаешь?"
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 7,
+  "fields": {
+    "topic": 4,
+    "author": 3,
+    "created": "2024-08-03T09:47:13.401Z",
+    "text": "Не-а вообще не знаю"
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 8,
+  "fields": {
+    "topic": 4,
+    "author": 4,
+    "created": "2024-08-03T09:47:53.141Z",
+    "text": "О я знаю как сделать его"
+  }
+},
+{
+  "model": "webapp.answers",
+  "pk": 9,
+  "fields": {
+    "topic": 4,
+    "author": 1,
+    "created": "2024-08-03T09:48:19.301Z",
+    "text": "Рассказывай"
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$mvq8maMB11YRDwM3lPOU7d$Cu65O+kjg7oBe2FAOGdr3SkMeIov9rvKbesXZ3pCRnw=",
+    "last_login": "2024-08-03T12:24:41.427Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "admin23",
+    "last_name": "",
+    "email": "admin@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-03T05:38:25Z",
+    "avatar": "avatars/drake-lil-yatchy-realization.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$eiqlFsSlTC8IDuwcYs0DU1$WarHVp3e5xZDdkDTg7XtkcEeVdJm3DHnzbuD4ujUU34=",
+    "last_login": "2024-08-03T11:08:33.647Z",
+    "is_superuser": false,
+    "username": "adam",
+    "first_name": "adam1",
+    "last_name": "",
+    "email": "adam@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T09:44:44.833Z",
+    "avatar": "avatars/IMG-d66c1f57b3a7d264c9b36b7f49ff91b0-V-1024x554.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$aXBepoLMiTSq7v59aNdESN$K5bHAiO/71Ch/uDBcowMfIiyMvr1jxamEXfPrRSo5wo=",
+    "last_login": "2024-08-03T11:13:39.823Z",
+    "is_superuser": false,
+    "username": "adam2",
+    "first_name": "adam2",
+    "last_name": "",
+    "email": "adam@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T09:47:39Z",
+    "avatar": "avatars/istockphoto-157677814-612x612.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$H4BhWa2q6IR3z6RNhVUfvS$D+yEiMVky/ugWGYqXEB/k+ETccSWru5WWOOA93mMiUw=",
+    "last_login": "2024-08-03T12:25:01.792Z",
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "papa",
+    "last_name": "",
+    "email": "manager@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T12:24:32Z",
+    "avatar": "avatars/scale_1200_XQRKgg0.jpeg",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+}
+]

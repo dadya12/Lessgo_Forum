@@ -1,0 +1,111 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Manager",
+    "permissions": [
+      [
+        "change_answers",
+        "webapp",
+        "answers"
+      ],
+      [
+        "delete_answers",
+        "webapp",
+        "answers"
+      ],
+      [
+        "change_topics",
+        "webapp",
+        "topics"
+      ],
+      [
+        "delete_topics",
+        "webapp",
+        "topics"
+      ]
+    ]
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$mvq8maMB11YRDwM3lPOU7d$Cu65O+kjg7oBe2FAOGdr3SkMeIov9rvKbesXZ3pCRnw=",
+    "last_login": "2024-08-03T12:24:41.427Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "admin23",
+    "last_name": "",
+    "email": "admin@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-03T05:38:25Z",
+    "avatar": "avatars/drake-lil-yatchy-realization.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$eiqlFsSlTC8IDuwcYs0DU1$WarHVp3e5xZDdkDTg7XtkcEeVdJm3DHnzbuD4ujUU34=",
+    "last_login": "2024-08-03T11:08:33.647Z",
+    "is_superuser": false,
+    "username": "adam",
+    "first_name": "adam1",
+    "last_name": "",
+    "email": "adam@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T09:44:44.833Z",
+    "avatar": "avatars/IMG-d66c1f57b3a7d264c9b36b7f49ff91b0-V-1024x554.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$aXBepoLMiTSq7v59aNdESN$K5bHAiO/71Ch/uDBcowMfIiyMvr1jxamEXfPrRSo5wo=",
+    "last_login": "2024-08-03T11:13:39.823Z",
+    "is_superuser": false,
+    "username": "adam2",
+    "first_name": "adam2",
+    "last_name": "",
+    "email": "adam@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T09:47:39Z",
+    "avatar": "avatars/istockphoto-157677814-612x612.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.myuser",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$H4BhWa2q6IR3z6RNhVUfvS$D+yEiMVky/ugWGYqXEB/k+ETccSWru5WWOOA93mMiUw=",
+    "last_login": "2024-08-03T12:25:01.792Z",
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "papa",
+    "last_name": "",
+    "email": "manager@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T12:24:32Z",
+    "avatar": "avatars/scale_1200_XQRKgg0.jpeg",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+}
+]
